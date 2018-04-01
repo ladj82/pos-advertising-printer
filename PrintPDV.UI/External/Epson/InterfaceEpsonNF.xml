@@ -1,0 +1,13 @@
+<EPSON>
+	<NAO_FISCAL>
+		<Log>0</Log>
+		<Path>C:\Log\</Path>
+		<MODELO>T20</MODELO>
+		<Fonte>FontB</Fonte>	
+		<NFCE>
+			<UrlFisco>http://www.nfe.se.gov.br/portal/consultarNFCe.jsp</UrlFisco>
+			<cIdToken>000001</cIdToken>
+			<CSC>O154R7E9AAAXCNZICCCGFT8FFFN2I111987I</CSC>
+		</NFCE>			
+	</NAO_FISCAL>
+</EPSON>

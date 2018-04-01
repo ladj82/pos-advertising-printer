@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup/>
+	<ItemGroup/>
+	<ItemGroup/>
+	<ItemGroup/>
+	<ItemGroup>
+		<ProjectReference Include="..\PrintPDV.Controllers\PrintPDV.Controllers.csproj">
+			<Name>PrintPDV.Controllers</Name>
+			<Project>{1752A4EF-76D2-42E7-99E4-149A344AB5E6}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PrintPDV.LanguagePack\PrintPDV.LanguagePack.csproj">
+			<Name>PrintPDV.LanguagePack</Name>
+			<Project>{EB92A673-20E9-44E5-955C-5DC20544EDAA}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PrintPDV.Models\PrintPDV.Models.csproj">
+			<Name>PrintPDV.Models</Name>
+			<Project>{12756D84-ED23-4B9D-BC87-A3CA1025731D}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PrintPDV.Persistence\PrintPDV.Persistence.csproj">
+			<Name>PrintPDV.Persistence</Name>
+			<Project>{11D8FAF5-9C8F-474D-B4B5-0A4246D1C572}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PrintPDV.UI\PrintPDV.UI.csproj">
+			<Name>PrintPDV.UI</Name>
+			<Project>{A4C738E1-BE6A-4688-AB33-9B58BF0ADC0F}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PrintPDV.Utility\PrintPDV.Utility.csproj">
+			<Name>PrintPDV.Utility</Name>
+			<Project>{A42A76F0-6F41-41DA-BA52-92834458AA74}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

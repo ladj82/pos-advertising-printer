@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4C738E1-BE6A-4688-AB33-9B58BF0ADC0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrintPDV.UI</RootNamespace>
+    <AssemblyName>PrintPDV.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Dev\PrintToFly\Deploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>PrintPDV</ProductName>
+    <PublisherName>PrintPDV</PublisherName>
+    <SuiteName>PrintPDV</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PrintPDV.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>579AE4F793FD0D110EEBD0AFFFC393FFB75C79B8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PrintPDV_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.12.1\lib\net40\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions">
+      <HintPath>..\packages\DapperExtensions.1.4.4\lib\net40\DapperExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Editor2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Editor2.Designer.cs">
+      <DependentUpon>Editor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\HatchComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ImageButton.designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WizardDatabaseSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\WizardDatabaseSetup.Designer.cs">
+      <DependentUpon>WizardDatabaseSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WizardLicenseSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\WizardLicenseSetup.Designer.cs">
+      <DependentUpon>WizardLicenseSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WizardPrinterSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\WizardPrinterSetup.Designer.cs">
+      <DependentUpon>WizardPrinterSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IWizardStep.cs" />
+    <Compile Include="PrintPDVEditor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVEditor2.Designer.cs">
+      <DependentUpon>PrintPDVEditor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDVGadget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVGadget.Designer.cs">
+      <DependentUpon>PrintPDVGadget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDVStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVStatistic.Designer.cs">
+      <DependentUpon>PrintPDVStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDVContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVContainer.Designer.cs">
+      <DependentUpon>PrintPDVContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDVCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVCampaign.Designer.cs">
+      <DependentUpon>PrintPDVCampaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDVSysTray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVVoucher.Designer.cs">
+      <DependentUpon>PrintPDVVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrintPDVWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPDVWizard.Designer.cs">
+      <DependentUpon>PrintPDVWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardPageCollection.cs" />
+    <EmbeddedResource Include="Components\Editor2.pt-BR.resx">
+      <DependentUpon>Editor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Editor2.resx">
+      <DependentUpon>Editor2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardDatabaseSetup.pt-BR.resx">
+      <DependentUpon>WizardDatabaseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardDatabaseSetup.resx">
+      <DependentUpon>WizardDatabaseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardLicenseSetup.pt-BR.resx">
+      <DependentUpon>WizardLicenseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardLicenseSetup.resx">
+      <DependentUpon>WizardLicenseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardPrinterSetup.pt-BR.resx">
+      <DependentUpon>WizardPrinterSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WizardPrinterSetup.resx">
+      <DependentUpon>WizardPrinterSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVEditor2.resx">
+      <DependentUpon>PrintPDVEditor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVGadget.resx">
+      <DependentUpon>PrintPDVGadget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVStatistic.pt-BR.resx">
+      <DependentUpon>PrintPDVStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVStatistic.resx">
+      <DependentUpon>PrintPDVStatistic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVContainer.resx">
+      <DependentUpon>PrintPDVContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVVoucher.pt-BR.resx">
+      <DependentUpon>PrintPDVVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVVoucher.resx">
+      <DependentUpon>PrintPDVVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVWizard.pt-BR.resx">
+      <DependentUpon>PrintPDVWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVCampaign.pt-BR.resx">
+      <DependentUpon>PrintPDVCampaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVCampaign.resx">
+      <DependentUpon>PrintPDVCampaign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVSysTray.resx">
+      <DependentUpon>PrintPDVSysTray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDVWizard.resx">
+      <DependentUpon>PrintPDVWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="External\Bematech\mp2032.dll" />
+    <Content Include="External\Bematech\SiUSBXp.dll" />
+    <Content Include="External\Daruma\DarumaFrameWork.dll" />
+    <Content Include="External\Epson\InterfaceEpsonNF.dll" />
+    <Content Include="External\Epson\InterfaceEpsonNF.xml" />
+    <Content Include="PrintPDV.ico" />
+    <Content Include="Resources\database\Cliparts\Alimentação\animal533.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\apple55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\baked2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\birthday10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\bread14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\burger25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cheese14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\chef15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\chicken7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\chilis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cocktail32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cocktails1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\coffee26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\coffee50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cook32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cook4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cooking15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\covered16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cup74.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cutlery22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cutlery23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\cutlery6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\dairy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\dessert4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\drink110.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\drink24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\drink81.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\fast-food.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\fastfood1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\fish52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\fruit42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\fruit72.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\glass15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\glass35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\healthy-food4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\healthy-food5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\hot-food.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\hot51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\hotdrink52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\hotdrink54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\italian1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\lunch4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\menu21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\pasta8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\pizza3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\plate17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\plate7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\restaurant51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\salad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\sandwich.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\sprig2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\steak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\sweet179.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\sweet9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\tea24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\wedding11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\wine16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\wine47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Alimentação\wine65.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\battery152.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\car106.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\car15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\car186.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\car189.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\car56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\cars26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\checkered12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\delivery13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\fuel14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\fuel24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\fuel4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\garage20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\gasstation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\gasstation5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\parking12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\sedan3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\transport131.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\transport157.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Combustível\wheels10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\aspirin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\drugs1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\first22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medical106.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medical12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medical7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medical8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medicine5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medicine64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\medicines4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\pharmacy10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\pharmacy19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\pharmacy8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\pill12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\tablets4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Farmácia\test-tube5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\agreement2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\badges1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\calendar146.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\call36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\camera115.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\christmas present11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\coin3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\coins15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\credit2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\creditcard3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\discount3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\dollar185.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\full22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\happy50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\heart13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\inspiration.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\magnifier13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\marker20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\new105.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\operator.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\phone21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\shop14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\shop3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\shopping187.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\smartphone86.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\three115.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Genérico\wifi74.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\accesory56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\baby73.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\black276.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\bowler-hat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothes16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing362.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing363.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing364.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing368.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\clothing369.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\gymnast98.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\hanger22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\housekeeper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\jacket2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\male200.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\soccer18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\soccer38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\t-shirt5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\tshirt17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\wallet17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Vestuário\winter-clothes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\connection28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\download164.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\email5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\facebook29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\facebook30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\favourites7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\google116.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\house34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\instagram12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\speech117.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\talk23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\thumbs4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\twitter1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\twitter20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\twitter36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\upload119.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\videos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\web58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Cliparts\Web\whatsapp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\AppConfigTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\AppLicenseTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\CampaignTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\GalleryClipartTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\GalleryTemplateTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\PrinterModelTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\PrinterTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\StatisticTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\database\Sql\VoucherTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\editor\et_bold.gif" />
+    <Content Include="Resources\editor\et_copy.gif" />
+    <Content Include="Resources\editor\et_cut.gif" />
+    <Content Include="Resources\editor\et_font.png" />
+    <Content Include="Resources\editor\et_fontDecrease.png" />
+    <Content Include="Resources\editor\et_fontIncrease.png" />
+    <Content Include="Resources\editor\et_indentLeft.gif" />
+    <Content Include="Resources\editor\et_indentRight.gif" />
+    <Content Include="Resources\editor\et_insertPicture.gif" />
+    <Content Include="Resources\editor\et_italics.gif" />
+    <Content Include="Resources\editor\et_justifyCenter.gif" />
+    <Content Include="Resources\editor\et_justifyLeft.gif" />
+    <Content Include="Resources\editor\et_justifyRight.gif" />
+    <Content Include="Resources\editor\et_listOrdered.gif" />
+    <Content Include="Resources\editor\et_listUnordered.gif" />
+    <Content Include="Resources\editor\et_new.png" />
+    <Content Include="Resources\editor\et_open.png" />
+    <Content Include="Resources\editor\et_paste.gif" />
+    <Content Include="Resources\editor\et_printer.gif" />
+    <Content Include="Resources\editor\et_redo.gif" />
+    <Content Include="Resources\editor\et_save.gif" />
+    <Content Include="Resources\editor\et_strikethrough.gif" />
+    <Content Include="Resources\editor\et_underline.gif" />
+    <Content Include="Resources\editor\et_undo.gif" />
+    <Content Include="Resources\editor\tpl_add.png" />
+    <Content Include="Resources\editor\tpl_apply.png" />
+    <Content Include="Resources\editor\tpl_delete.png" />
+    <Content Include="Resources\g_exit.png" />
+    <Content Include="Resources\g_move.png" />
+    <Content Include="Resources\g_print-down.png" />
+    <Content Include="Resources\g_print-over.png" />
+    <Content Include="Resources\g_print-up.png" />
+    <Content Include="Resources\m_campaign.png" />
+    <Content Include="Resources\m_editor.png" />
+    <Content Include="Resources\m_gadget.png" />
+    <Content Include="Resources\m_license.png" />
+    <Content Include="Resources\m_printer.png" />
+    <Content Include="Resources\m_statistic.png" />
+    <Content Include="Resources\m_tracker.png" />
+    <Content Include="Resources\printPDVTest.bmp" />
+    <None Include="Resources\PrintPDV.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrintPDV.Controllers\PrintPDV.Controllers.csproj">
+      <Project>{1752a4ef-76d2-42e7-99e4-149a344ab5e6}</Project>
+      <Name>PrintPDV.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrintPDV.LanguagePack\PrintPDV.LanguagePack.csproj">
+      <Project>{eb92a673-20e9-44e5-955c-5dc20544edaa}</Project>
+      <Name>PrintPDV.LanguagePack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrintPDV.Models\PrintPDV.Models.csproj">
+      <Project>{12756d84-ed23-4b9d-bc87-a3ca1025731d}</Project>
+      <Name>PrintPDV.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrintPDV.Utility\PrintPDV.Utility.csproj">
+      <Project>{a42a76f0-6f41-41da-ba52-92834458aa74}</Project>
+      <Name>PrintPDV.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\database\Templates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="$(ProjectDir)External\Bematech\mp2032.dll" DestinationFolder="$(IntermediateOutputPath)">
+    </Copy>
+    <Copy SourceFiles="$(ProjectDir)External\Bematech\mp2032.dll" DestinationFolder="$(TargetDir)">
+    </Copy>
+    <Copy SourceFiles="$(ProjectDir)External\Bematech\SiUSBXp.dll" DestinationFolder="$(IntermediateOutputPath)">
+    </Copy>
+    <Copy SourceFiles="$(ProjectDir)External\Bematech\SiUSBXp.dll" DestinationFolder="$(TargetDir)">
+    </Copy>
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets')" />
+</Project>

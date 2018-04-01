@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorMessage_AppLicense_Required_Activation" xml:space="preserve">
+    <value>O campo "Ativação" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_Required_Identifier" xml:space="preserve">
+    <value>O campo "Identificador" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_Required_Key" xml:space="preserve">
+    <value>O campo "Chave" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_Required_PrintLimit" xml:space="preserve">
+    <value>O campo "Limite de impressões" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_StringLength_Identifier" xml:space="preserve">
+    <value>O campo "Identificador" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_StringLength_Key" xml:space="preserve">
+    <value>O campo "Chave" deve possuir 6 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Rule_UniqueName" xml:space="preserve">
+    <value>Já existe uma campanha com o mesmo nome. Escolha outro.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Range_BorderWidth" xml:space="preserve">
+    <value>O campo "Espessura da borda" deve ser menor ou igual a 100.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_Active" xml:space="preserve">
+    <value>O campo "Ativo" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_Created" xml:space="preserve">
+    <value>O campo "Criado" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_CutType" xml:space="preserve">
+    <value>O campo "Tipo de corte" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_Name" xml:space="preserve">
+    <value>O campo "Nome" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_PaperSize" xml:space="preserve">
+    <value>O campo "Tamanho do papel" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_PrintDateTime" xml:space="preserve">
+    <value>O campo "Iprimir Data e Hora" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_PrintVoucher" xml:space="preserve">
+    <value>O campo "Imprimir Cupom" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_Required_VoucherBarcodeType" xml:space="preserve">
+    <value>O campo "Tipo de código de barras" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_StringLength_BorderStyle" xml:space="preserve">
+    <value>O campo "Estilo de borda" deve ser menor ou igual a 20 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_StringLength_Name" xml:space="preserve">
+    <value>O campo "Nome" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Campaign_StringLength_Shortcut" xml:space="preserve">
+    <value>O campo "Atalho" deve ser menor ou igual a 10 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_GalleryClipart_Required_GalleryType" xml:space="preserve">
+    <value>O campo "Tipo de Galeria" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_GalleryClipart_Required_Image" xml:space="preserve">
+    <value>O campo "Imagem" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_GalleryClipart_Required_Name" xml:space="preserve">
+    <value>O campo "Nome" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_GalleryClipart_StringLength_Name" xml:space="preserve">
+    <value>O campo "Nome" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_License_Rule_Expired" xml:space="preserve">
+    <value>Licença expirada.</value>
+  </data>
+  <data name="ErrorMessage_License_Rule_NotFound" xml:space="preserve">
+    <value>Licença não encontrada.</value>
+  </data>
+  <data name="ErrorMessage_License_Rule_NotValid" xml:space="preserve">
+    <value>Licença inválida.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Required_ConnectionType" xml:space="preserve">
+    <value>O campo "Tipo de conexão" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Required_Manufacturer" xml:space="preserve">
+    <value>O campo "Fabricante" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Required_Model" xml:space="preserve">
+    <value>O campo "Modelo" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Required_Name" xml:space="preserve">
+    <value>O campo "Nome" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Printer_StringLength_IpAddress" xml:space="preserve">
+    <value>O campo "Endereço de rede" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Printer_StringLength_Manufacturer" xml:space="preserve">
+    <value>O campo "Fabricante" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Printer_StringLength_Model" xml:space="preserve">
+    <value>O campo "Modelo" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Printer_StringLength_Name" xml:space="preserve">
+    <value>O campo "Nome" deve ser menor ou igual a 50 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_CampaignType" xml:space="preserve">
+    <value>O campo "Tipo de campanha" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_License" xml:space="preserve">
+    <value>O campo "Licença" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_PrintTrigger" xml:space="preserve">
+    <value>O campo "Gatilho de impressão" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_TimeStamp" xml:space="preserve">
+    <value>O campo "TimeStamp" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_StringLength_License" xml:space="preserve">
+    <value>O campo "Licença" deve ser 6 caracteres.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Rule_AlreadyUsed" xml:space="preserve">
+    <value>Cupom já utilizado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Rule_NotFound" xml:space="preserve">
+    <value>Cupom não encontrado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Required_BarcodeType" xml:space="preserve">
+    <value>O campo "Tipo de código de barras" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Required_Campaign_Id" xml:space="preserve">
+    <value>O campo "Campanha" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Required_Code" xml:space="preserve">
+    <value>O campo "Chave" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_Required_Created" xml:space="preserve">
+    <value>O campo "Data de criação" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Voucher_StringLength_Code" xml:space="preserve">
+    <value>O campo "Chave" deve possuir 7 caracteres.</value>
+  </data>
+  <data name="Application_ErrorMessage_DatabaseNotFound" xml:space="preserve">
+    <value>Banco de dados não encontrado.</value>
+  </data>
+  <data name="Generic_Button_Delete" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="Generic_Button_Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Generic_ClassName_AppLicense" xml:space="preserve">
+    <value>Licença</value>
+  </data>
+  <data name="Generic_ClassName_Campaign" xml:space="preserve">
+    <value>Campanha</value>
+  </data>
+  <data name="Generic_ClassName_GalleryClipart" xml:space="preserve">
+    <value>Galeria de Imagens</value>
+  </data>
+  <data name="Generic_ClassName_GalleryTemplate" xml:space="preserve">
+    <value>Galeria de Template</value>
+  </data>
+  <data name="Generic_ClassName_Printer" xml:space="preserve">
+    <value>Impressora</value>
+  </data>
+  <data name="Generic_ClassName_Statistic" xml:space="preserve">
+    <value>Estatística</value>
+  </data>
+  <data name="Generic_ClassName_Voucher" xml:space="preserve">
+    <value>Cupom</value>
+  </data>
+  <data name="Generic_ErrorMessage_Delete" xml:space="preserve">
+    <value>Erro durante a exclusão "{0}".</value>
+  </data>
+  <data name="Generic_ErrorMessage_Insert" xml:space="preserve">
+    <value>Erro durante a inserção "{0}".</value>
+  </data>
+  <data name="Generic_ErrorMessage_Read" xml:space="preserve">
+    <value>Erro durante a leitura "{0}".</value>
+  </data>
+  <data name="Generic_ErrorMessage_Save" xml:space="preserve">
+    <value>Erro ao salvar "{0}".</value>
+  </data>
+  <data name="Generic_ErrorMessage_Update" xml:space="preserve">
+    <value>Erro durante a atualização "{0}".</value>
+  </data>
+  <data name="Generic_Menu_SysTray_Exit" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Generic_Menu_SysTray_Gadget" xml:space="preserve">
+    <value>Gadget</value>
+  </data>
+  <data name="Generic_Menu_SysTray_Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="Generic_MessageBox_ConfirmYesOrNo" xml:space="preserve">
+    <value>Você confirma a ação?</value>
+  </data>
+  <data name="Generic_MessageBox_ErrorTitle" xml:space="preserve">
+    <value>Erro!</value>
+  </data>
+  <data name="Generic_MessageBox_InformationTitle" xml:space="preserve">
+    <value>Informação!</value>
+  </data>
+  <data name="Generic_MessageBox_WarningTitle" xml:space="preserve">
+    <value>Aviso!</value>
+  </data>
+  <data name="ErrorMessage_Printer_Rule_PrinterNotDefined" xml:space="preserve">
+    <value>Uma impressora deve ser definida.</value>
+  </data>
+  <data name="Generic_Label_Disabled" xml:space="preserve">
+    <value>Desativado</value>
+  </data>
+  <data name="Generic_Label_Enabled" xml:space="preserve">
+    <value>Ativado</value>
+  </data>
+  <data name="Generic_Label_Images" xml:space="preserve">
+    <value>Imagens</value>
+  </data>
+  <data name="Generic_Label_IpAddress" xml:space="preserve">
+    <value>Endereço de Rede</value>
+  </data>
+  <data name="Generic_Label_Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Generic_Label_PrintsLeft" xml:space="preserve">
+    <value>{0} impressões restantes.</value>
+  </data>
+  <data name="Generic_Label_Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Generic_MessageBox_ConfirmYesOrNoTitle" xml:space="preserve">
+    <value>Sim ou Não?</value>
+  </data>
+  <data name="Generic_SuccessMessage_Delete" xml:space="preserve">
+    <value>Registro excluído com sucesso.</value>
+  </data>
+  <data name="Generic_SuccessMessage_Save" xml:space="preserve">
+    <value>Registro salvo com sucesso.</value>
+  </data>
+  <data name="InfoMessage_Campaign_Rule_NoActiveCampaign" xml:space="preserve">
+    <value>Não há Campanhas ativas para serem impressas.</value>
+  </data>
+  <data name="Application_ErrorMessage_FolderNotCreated" xml:space="preserve">
+    <value>Erro a criar a pasta "{0}".</value>
+  </data>
+  <data name="InfoMessage_Printer_Rule_PrinterNotFound" xml:space="preserve">
+    <value>Nenhuma impressora compatível foi encontrada. Verifique a lista de impressoras compatíveis ao lado. Por favor instale uma e clique no botão "Recarregar".</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_Action" xml:space="preserve">
+    <value>O campo "Ação" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Required_Value" xml:space="preserve">
+    <value>O campo "Valor" precisa ser informado.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Rule_PrinterHandlerNotResolved" xml:space="preserve">
+    <value>O gerenciador de impressão não foi resolvido.</value>
+  </data>
+  <data name="ErrorMessage_Printer_Required_PrinterNotSelected" xml:space="preserve">
+    <value>O campo "Impressora" deve ser informado.</value>
+  </data>
+  <data name="ErrorMessage_GalleryClipart_Required_NotSelected" xml:space="preserve">
+    <value>Uma imagem deve ser selecionada.</value>
+  </data>
+  <data name="ErrorMessage_GalleryTemplate_Required_NotSelected" xml:space="preserve">
+    <value>Um modelo deve ser selecionado.</value>
+  </data>
+  <data name="InfoMessage_Printer_Info_PrintTestPage" xml:space="preserve">
+    <value>Parabéns, teste realizado com sucesso!</value>
+  </data>
+  <data name="ErrorMessage_Statistic_Rule_SyncError" xml:space="preserve">
+    <value>Erro durante a sincronização de dados.</value>
+  </data>
+  <data name="ErrorMessage_AppLicense_Required_Active" xml:space="preserve">
+    <value>O campo "Ativo" precisa ser informado.</value>
+  </data>
+</root>
